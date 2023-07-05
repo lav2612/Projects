@@ -1,0 +1,30 @@
+Introduction:
+
+The "sb" command is used to detect malware in a system by starting from a given process ID and displaying the parent, grandparent, etc. processes. This report describes the heuristics used to determine the root of the trouble and justify their usage.
+
+
+
+
+Heuristics:
+
+The following heuristics were used in the implementation of the "sb" command:
+
+Time Spent by Process: The amount of time spent by each process is a key factor in determining the root of the trouble. If a process has spent an unusually long amount of time, it may be the root of the trouble.
+
+Number of Child Processes: The number of child processes that a process has spawned can also be an indicator of malware activity. If a process has spawned an unusual number of child processes, it may be the root of the trouble.
+
+
+
+
+Justification:
+
+Time spent by a process and the number of child processes that it has spawned are commonly used indicators of malware activity. These indicators have been proven to be effective in detecting malware in many real-world scenarios.
+
+Additionally, by combining these two indicators, we can improve the accuracy of our malware detection. For example, a process that has spent a long amount of time and has also spawned an unusual number of child processes is more likely to be the root of the trouble than a process that has only spent a long amount of time or has only spawned an unusual number of child processes.
+
+
+
+
+Conclusion:
+
+In conclusion, the heuristics used in the implementation of the "sb" command are effective in detecting malware in a system. By combining the time spent by each process and the number of child processes that a process has spawned, we can increase the accuracy of our malware detection.
